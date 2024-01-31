@@ -7,8 +7,10 @@ class SnackBarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "SnackBar",
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('SnackBar'),
+        ),
         body: Center(
           child: ElevatedButton(
             child: Text('Show SnackBar'),
@@ -65,15 +67,15 @@ class SnackBarScreen extends StatelessWidget {
                 snackbarStatus: (val){
                   print(val);
                 },
-                userInputForm: Form(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(),
-                      )
-                    ],
-                  ),
-                ),// This will track the status of snackbar whether it is open or close
+                // userInputForm: Form(
+                //   child: Row(
+                //     children: [
+                //       Expanded(
+                //         child: TextField(),
+                //       )
+                //     ],
+                //   ),
+                // ),// This will track the status of snackbar whether it is open or close
               );
             },
           ),
