@@ -5,6 +5,7 @@ import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
 import 'package:get_x/get_x/4_route_navigation_unnamed.dart';
 import 'package:get_x/get_x/5_route_navigation_named.dart';
+import 'package:get_x/get_x/6_state_management_reactive_state_manager_using_obx.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -12,7 +13,7 @@ void main() {
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => NamedRouteNavigationScreen()),
+      GetPage(name: '/', page:() => ReactiveStateManagementUsingOBSScreen()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
