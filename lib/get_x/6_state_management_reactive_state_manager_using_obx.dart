@@ -6,7 +6,7 @@ class ReactiveStateManagementUsingOBSScreen extends StatelessWidget {
 
   /*
   * If we want that every time the value of variable changes then all the widget which
-  * uses the variable must update itself, then he variable must be reactive or observable
+  * uses the variable must update itself, then the variable must be reactive or observable
   * and to make it Reactive(Rx) .obs is used with variable value.
   *
   * To update the widget which uses Rx variable must be placed inside

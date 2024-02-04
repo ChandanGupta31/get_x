@@ -7,6 +7,7 @@ import 'package:get_x/get_x/4_route_navigation_unnamed.dart';
 import 'package:get_x/get_x/5_route_navigation_named.dart';
 import 'package:get_x/get_x/6_state_management_reactive_state_manager_using_obx.dart';
 import 'package:get_x/get_x/7_state_management_custom_class.dart';
+import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/ui.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -14,7 +15,7 @@ void main() {
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => StateManagementCustomCLassScreen()),
+      GetPage(name: '/', page:() => GetXcontrollerSeparatingBusinessLogicAndUI()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
