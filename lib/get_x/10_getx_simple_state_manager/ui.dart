@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/get_x/9_getx_controller_type/business_logic.dart';
+import 'package:get_x/get_x/10_getx_simple_state_manager/business_logic.dart';
+
 
 class GetxSimpleStateManager extends StatelessWidget {
   GetxSimpleStateManager({super.key});
