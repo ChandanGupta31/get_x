@@ -15,24 +15,24 @@ import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/u
 import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
 
 void main() {
-  runApp(GetxInternationalization());
-  // runApp(GetMaterialApp(
-  //   debugShowCheckedModeBanner: false,
-  //   initialRoute: '/',
-  //   defaultTransition: Transition.zoom,
-  //   getPages: [
-  //     GetPage(name: '/', page:() => GetxUniqueID()),
-  //     GetPage(
-  //       name: '/home',
-  //       page: ()=> SnackBarScreen(),
-  //       transition: Transition.zoom,    // Once we define the transition here it will overwrite the default one
-  //     ),
-  //     GetPage(
-  //       name: '/next/:someValue',      // we can also pass parameter along it after/:
-  //       page: ()=> ShowDialogScreen(),
-  //     ),
-  //
-  //     // If we navigate to the route which does not exist then it wil show a page with message unknown route.
-  //   ],
-  // ));
+  // runApp(GetxInternationalization());
+  runApp(GetMaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: '/',
+    defaultTransition: Transition.zoom,
+    getPages: [
+      GetPage(name: '/', page:() => GetxUniqueID()),
+      GetPage(
+        name: '/home',
+        page: ()=> SnackBarScreen(),
+        transition: Transition.zoom,    // Once we define the transition here it will overwrite the default one
+      ),
+      GetPage(
+        name: '/next/:someValue',      // we can also pass parameter along it after/:
+        page: ()=> ShowDialogScreen(),
+      ),
+
+      // If we navigate to the route which does not exist then it wil show a page with message unknown route.
+    ],
+  ));
 }
