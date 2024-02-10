@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x/get_x/10_getx_simple_state_manager/ui.dart';
 import 'package:get_x/get_x/11_getx_controller_lifecycle/ui.dart';
 import 'package:get_x/get_x/12_getx_unique_id/ui.dart';
+import 'package:get_x/get_x/14_implementing_internationalization/ui.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
@@ -14,23 +15,24 @@ import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/u
 import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
 
 void main() {
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: '/',
-    defaultTransition: Transition.zoom,
-    getPages: [
-      GetPage(name: '/', page:() => GetxUniqueID()),
-      GetPage(
-        name: '/home',
-        page: ()=> SnackBarScreen(),
-        transition: Transition.zoom,    // Once we define the transition here it will overwrite the default one
-      ),
-      GetPage(
-        name: '/next/:someValue',      // we can also pass parameter along it after/:
-        page: ()=> ShowDialogScreen(),
-      ),
-
-      // If we navigate to the route which does not exist then it wil show a page with message unknown route.
-    ],
-  ));
+  runApp(GetxInternationalization());
+  // runApp(GetMaterialApp(
+  //   debugShowCheckedModeBanner: false,
+  //   initialRoute: '/',
+  //   defaultTransition: Transition.zoom,
+  //   getPages: [
+  //     GetPage(name: '/', page:() => GetxUniqueID()),
+  //     GetPage(
+  //       name: '/home',
+  //       page: ()=> SnackBarScreen(),
+  //       transition: Transition.zoom,    // Once we define the transition here it will overwrite the default one
+  //     ),
+  //     GetPage(
+  //       name: '/next/:someValue',      // we can also pass parameter along it after/:
+  //       page: ()=> ShowDialogScreen(),
+  //     ),
+  //
+  //     // If we navigate to the route which does not exist then it wil show a page with message unknown route.
+  //   ],
+  // ));
 }
