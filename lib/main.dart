@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/get_x/10_getx_simple_state_manager/ui.dart';
 import 'package:get_x/get_x/11_getx_controller_lifecycle/ui.dart';
 import 'package:get_x/get_x/12_getx_unique_id/ui.dart';
 import 'package:get_x/get_x/14_implementing_internationalization/ui.dart';
+import 'package:get_x/get_x/16_getx_services/ui.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
@@ -16,12 +19,15 @@ import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
 
 void main() {
   // runApp(GetxInternationalization());
+
+  Get.putAsync<Service>( () async => await Service());
+  
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => GetxUniqueID()),
+      GetPage(name: '/', page:() => GetxServices()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
