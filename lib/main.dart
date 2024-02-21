@@ -7,6 +7,7 @@ import 'package:get_x/get_x/11_getx_controller_lifecycle/ui.dart';
 import 'package:get_x/get_x/12_getx_unique_id/ui.dart';
 import 'package:get_x/get_x/14_implementing_internationalization/ui.dart';
 import 'package:get_x/get_x/16_getx_services/ui.dart';
+import 'package:get_x/get_x/18_getx_api_fetching/product_module/views/product_list_view.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
@@ -27,7 +28,7 @@ void main() {
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => GetxServices()),
+      GetPage(name: '/', page:() => ProductView()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
