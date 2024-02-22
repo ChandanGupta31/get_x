@@ -2,12 +2,14 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:get_x/get_x/10_getx_simple_state_manager/ui.dart';
 import 'package:get_x/get_x/11_getx_controller_lifecycle/ui.dart';
 import 'package:get_x/get_x/12_getx_unique_id/ui.dart';
 import 'package:get_x/get_x/14_implementing_internationalization/ui.dart';
 import 'package:get_x/get_x/16_getx_services/ui.dart';
 import 'package:get_x/get_x/18_getx_api_fetching/product_module/views/product_list_view.dart';
+import 'package:get_x/get_x/19_getx_storage_and_email_validator.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
@@ -18,17 +20,18 @@ import 'package:get_x/get_x/7_state_management_custom_class.dart';
 import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/ui.dart';
 import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
 
-void main() {
+Future<void> main() async {
   // runApp(GetxInternationalization());
 
-  Get.putAsync<Service>( () async => await Service());
+  await GetStorage.init();
+  Get.putAsync<Service>( () async => Service());
   
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => ProductView()),
+      GetPage(name: '/', page:() => StorageAndEmailValidator()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
