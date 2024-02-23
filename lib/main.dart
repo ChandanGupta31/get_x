@@ -11,6 +11,7 @@ import 'package:get_x/get_x/16_getx_services/ui.dart';
 import 'package:get_x/get_x/18_getx_api_fetching/product_module/views/product_list_view.dart';
 import 'package:get_x/get_x/19_getx_storage_and_email_validator.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
+import 'package:get_x/get_x/20_getx_getview_and_getwidget/ui.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
 import 'package:get_x/get_x/4_route_navigation_unnamed.dart';
@@ -31,7 +32,7 @@ Future<void> main() async {
     initialRoute: '/',
     defaultTransition: Transition.zoom,
     getPages: [
-      GetPage(name: '/', page:() => StorageAndEmailValidator()),
+      GetPage(name: '/', page:() => GetViewAndGetWidget()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
