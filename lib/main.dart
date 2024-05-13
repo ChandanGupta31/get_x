@@ -13,6 +13,8 @@ import 'package:get_x/get_x/19_getx_storage_and_email_validator.dart';
 import 'package:get_x/get_x/1_snack_bar.dart';
 import 'package:get_x/get_x/20_getx_getview_and_getwidget/ui.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
+import 'package:get_x/get_x/32_getx_internet_connectivity/network/bindings/network_binding.dart';
+import 'package:get_x/get_x/32_getx_internet_connectivity/views/home_view.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
 import 'package:get_x/get_x/4_route_navigation_unnamed.dart';
 import 'package:get_x/get_x/5_route_navigation_named.dart';
@@ -31,8 +33,9 @@ Future<void> main() async {
     debugShowCheckedModeBanner: false,
     initialRoute: '/',
     defaultTransition: Transition.zoom,
+    initialBinding: NetworkBinding(),
     getPages: [
-      GetPage(name: '/', page:() => GetViewAndGetWidget()),
+      GetPage(name: '/', page:() => NetworkHome()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
