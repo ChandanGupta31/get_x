@@ -23,6 +23,8 @@ import 'package:get_x/get_x/7_state_management_custom_class.dart';
 import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/ui.dart';
 import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
 
+import 'get_x/33_getx_image_picker/home.dart';
+
 Future<void> main() async {
   // runApp(GetxInternationalization());
 
@@ -35,7 +37,7 @@ Future<void> main() async {
     defaultTransition: Transition.zoom,
     initialBinding: NetworkBinding(),
     getPages: [
-      GetPage(name: '/', page:() => NetworkHome()),
+      GetPage(name: '/', page:() => ImagePickerHome()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),

@@ -40,6 +40,9 @@ dependencies:
   http: ^1.2.0
   get_storage: ^2.1.1
   connectivity_plus: ^6.0.3
+  image_cropper: ^6.0.0
+  image_picker: ^1.1.1
+  flutter_image_compress: ^2.2.0
 
 dev_dependencies:
   flutter_test:
