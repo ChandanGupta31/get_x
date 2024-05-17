@@ -53,5 +53,8 @@
     <key>NSMicrophoneUsageDescription</key>
     <string>Image Uploading Purpose</string>
 
+    <key>NSFaceIDUsageDescription</key>
+    <string>For authentication purpose</string>
+
 </dict>
 </plist>

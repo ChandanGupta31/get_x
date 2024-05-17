@@ -15,6 +15,7 @@ import 'package:get_x/get_x/20_getx_getview_and_getwidget/ui.dart';
 import 'package:get_x/get_x/2_show_dialog.dart';
 import 'package:get_x/get_x/32_getx_internet_connectivity/network/bindings/network_binding.dart';
 import 'package:get_x/get_x/32_getx_internet_connectivity/views/home_view.dart';
+import 'package:get_x/get_x/35_getx_fingerprint_auth/fingerprint_auth_home.dart';
 import 'package:get_x/get_x/3_bottom_sheed_and_dynamic_view.dart';
 import 'package:get_x/get_x/4_route_navigation_unnamed.dart';
 import 'package:get_x/get_x/5_route_navigation_named.dart';
@@ -22,7 +23,6 @@ import 'package:get_x/get_x/6_state_management_reactive_state_manager_using_obx.
 import 'package:get_x/get_x/7_state_management_custom_class.dart';
 import 'package:get_x/get_x/8_getx_controller_separating_business_logic_and_ui/ui.dart';
 import 'package:get_x/get_x/9_getx_controller_type/ui.dart';
-
 import 'get_x/33_getx_image_picker/home.dart';
 
 Future<void> main() async {
@@ -37,7 +37,7 @@ Future<void> main() async {
     defaultTransition: Transition.zoom,
     initialBinding: NetworkBinding(),
     getPages: [
-      GetPage(name: '/', page:() => ImagePickerHome()),
+      GetPage(name: '/', page:() => FingerprintAuthHome()),
       GetPage(
         name: '/home',
         page: ()=> SnackBarScreen(),
